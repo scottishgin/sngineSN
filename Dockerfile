@@ -1,2 +1,3 @@
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
+FROM php:8.0.7-apache
+RUN docker-php-ext-install mysqli pdo pdo_mysql phpmyadmin
+COPY . /usr/share/lamp/html
